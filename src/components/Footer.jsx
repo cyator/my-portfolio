@@ -1,23 +1,37 @@
 import React from 'react';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 function Footer() {
 	return (
 		<footer className="py-3 mt-4 bg-dark">
 			<ul className="nav justify-content-center border-bottom pb-3 mb-3 container">
 				<li className="nav-item">
-					<a href="#home" className="nav-link px-2 text-white">
+					<button
+						className="btn btn-link nav-link px-2 text-white"
+						onClick={() => scroll.scrollToTop()}
+					>
 						Home
-					</a>
+					</button>
 				</li>
 				<li className="nav-item">
-					<a href="#projects" className="nav-link px-2 text-white">
+					<Link
+						to="projects"
+						smooth
+						duration={1000}
+						className="nav-link px-2 text-white"
+					>
 						Projects
-					</a>
+					</Link>
 				</li>
 				<li className="nav-item">
-					<a href="#contacts" className="nav-link px-2 text-white">
+					<Link
+						to="contacts"
+						smooth
+						duration={1000}
+						className="nav-link px-2 text-white"
+					>
 						Contacts
-					</a>
+					</Link>
 				</li>
 			</ul>
 			<p className="text-center text-white">&copy; 2021 Christian Yator, Inc</p>

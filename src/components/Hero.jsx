@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from './assets/logo.svg';
+import { Link } from 'react-scroll';
 
 function Hero() {
 	return (
@@ -20,9 +21,14 @@ function Hero() {
 					prebuilt components, and powerful JavaScript plugins.
 				</p>
 				<div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<a href="#projects" className="btn btn-outline-primary btn-lg px-4">
+					<Link
+						to="projects"
+						smooth
+						duration={1000}
+						className="btn btn-outline-primary btn-lg px-4"
+					>
 						Projects
-					</a>
+					</Link>
 				</div>
 			</div>
 		</div>

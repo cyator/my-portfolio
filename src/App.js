@@ -7,7 +7,7 @@ import Home from './components/Home';
 
 function App() {
 	return (
-		<div id="home" className="App">
+		<div className="App">
 			<NavBar />
 			<Home />
 			<FooterPortal />

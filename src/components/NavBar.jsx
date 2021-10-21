@@ -1,12 +1,17 @@
 import React from 'react';
 import brand from './assets/brand.svg';
 import '../../node_modules/bootstrap/js/dist/collapse';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 function NavBar() {
 	return (
 		<nav className="navbar navbar-expand-lg navbar-light">
 			<div className="container">
-				<a href="/home" className="navbar-brand">
+				<button
+					type="button"
+					onClick={() => scroll.scrollToTop()}
+					className="navbar-brand btn btn-link"
+				>
 					<img
 						src={brand}
 						alt="brand"
@@ -18,7 +23,7 @@ function NavBar() {
 						className="img-fluid d-sm-none"
 						width={200}
 					/>
-				</a>
+				</button>
 				<button
 					className="navbar-toggler"
 					type="button"
@@ -33,19 +38,29 @@ function NavBar() {
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="#home">
+							<button
+								className="nav-link btn btn-link"
+								aria-current="page"
+								onClick={() => scroll.scrollToTop()}
+							>
 								Home
-							</a>
+							</button>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" aria-current="page" href="#projects">
+							<Link
+								className="nav-link"
+								aria-current="page"
+								smooth
+								duration={1000}
+								to="projects"
+							>
 								Projects
-							</a>
+							</Link>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="#contacts">
+							<Link className="nav-link" smooth duration={1000} to="contacts">
 								Contacts
-							</a>
+							</Link>
 						</li>
 					</ul>
 				</div>
