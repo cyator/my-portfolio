@@ -1,12 +1,24 @@
 import React from 'react';
 import brand from './brand.svg';
+import '../../node_modules/bootstrap/js/dist/collapse';
+import '../../node_modules/bootstrap/js/dist/tab';
 
 function NavBar() {
 	return (
-		<nav className="navbar navbar-expand-lg navbar-light sticky">
+		<nav className="navbar navbar-expand-lg navbar-light">
 			<div className="container">
 				<a href="/home" className="navbar-brand">
-					<img src={brand} alt="brand" />
+					<img
+						src={brand}
+						alt="brand"
+						className="img-fluid d-none d-sm-block"
+					/>
+					<img
+						src={brand}
+						alt="brand"
+						className="img-fluid d-sm-none"
+						width={200}
+					/>
 				</a>
 				<button
 					className="navbar-toggler"

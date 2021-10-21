@@ -1,0 +1,12 @@
+.nav-link {
+	border-bottom: 0.25rem solid transparent;
+	color: #000;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+	border-bottom-color: rgba(255, 170, 170, 0.5);
+}
+.nav-item .active {
+	border-bottom-color: #faa;
+}
