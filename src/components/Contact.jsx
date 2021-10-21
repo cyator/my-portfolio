@@ -6,7 +6,18 @@ function Contact() {
 
 	return (
 		<div className="py-3">
-			<form onSubmit={handleSubmit((data) => console.log(data))}>
+			<form
+				onSubmit={handleSubmit((data) => {
+					fetch('/', {
+						method: 'POST',
+						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+						body: data,
+					})
+						.then(() => console.log('Form successfully submitted'))
+						.catch((error) => alert(error));
+				})}
+				data-netlify="true"
+			>
 				<div className="mb-3">
 					<label htmlFor="name" className="form-label">
 						Name
