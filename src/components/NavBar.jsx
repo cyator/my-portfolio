@@ -1,7 +1,6 @@
 import React from 'react';
-import brand from './brand.svg';
+import brand from './assets/brand.svg';
 import '../../node_modules/bootstrap/js/dist/collapse';
-import '../../node_modules/bootstrap/js/dist/tab';
 
 function NavBar() {
 	return (
@@ -34,22 +33,17 @@ function NavBar() {
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
 						<li className="nav-item">
-							<a className="nav-link active" aria-current="page" href="/home">
+							<a className="nav-link active" aria-current="page" href="#home">
 								Home
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" aria-current="page" href="/projects">
+							<a className="nav-link" aria-current="page" href="#projects">
 								Projects
 							</a>
 						</li>
 						<li className="nav-item">
-							<a className="nav-link" href="/about">
-								About
-							</a>
-						</li>
-						<li className="nav-item">
-							<a className="nav-link" href="/contacts">
+							<a className="nav-link" href="#contacts">
 								Contacts
 							</a>
 						</li>

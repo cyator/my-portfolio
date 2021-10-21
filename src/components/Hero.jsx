@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from './assets/logo.svg';
 
 function Hero() {
 	return (
@@ -20,9 +20,9 @@ function Hero() {
 					prebuilt components, and powerful JavaScript plugins.
 				</p>
 				<div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-					<button type="button" className="btn btn-outline-primary btn-lg px-4">
+					<a href="#projects" className="btn btn-outline-primary btn-lg px-4">
 						Projects
-					</button>
+					</a>
 				</div>
 			</div>
 		</div>
