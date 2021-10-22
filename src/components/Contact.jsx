@@ -3,23 +3,30 @@ import { useForm, Controller } from 'react-hook-form';
 
 function Contact() {
 	const { control, handleSubmit } = useForm();
-	const encode = (data) => {
+
+	function encode(data) {
 		return Object.keys(data)
 			.map(
 				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
 			)
 			.join('&');
-	};
+	}
+
 	return (
 		<div className="py-3">
 			<form
+				data-netlify="true"
+				method="post"
 				onSubmit={handleSubmit((data) => {
 					fetch('/', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-						body: encode({ 'form-name': 'contact', ...data }),
+						body: encode({
+							'form-name': 'contact',
+							...data,
+						}),
 					})
-						.then(() => console.log('Form successfully submitted'))
+						.then(() => console.log('success'))
 						.catch((error) => alert(error));
 				})}
 			>
@@ -36,7 +43,7 @@ function Contact() {
 									className={error ? 'form-control is-invalid' : 'form-control'}
 									id="name"
 								/>
-								<div class="invalid-feedback">
+								<div className="invalid-feedback">
 									{error?.message ?? 'please check if your input is correct'}
 								</div>
 							</>
@@ -59,7 +66,7 @@ function Contact() {
 									className={error ? 'form-control is-invalid' : 'form-control'}
 									id="email"
 								/>
-								<div class="invalid-feedback">
+								<div className="invalid-feedback">
 									{error?.message ?? 'please check if your input is correct'}
 								</div>
 							</>
@@ -87,7 +94,7 @@ function Contact() {
 									className={error ? 'form-control is-invalid' : 'form-control'}
 									aria-label="message"
 								></textarea>
-								<div class="invalid-feedback">
+								<div className="invalid-feedback">
 									{error?.message ?? 'please check if your input is correct'}
 								</div>
 							</>
