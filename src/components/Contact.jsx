@@ -3,7 +3,13 @@ import { useForm, Controller } from 'react-hook-form';
 
 function Contact() {
 	const { control, handleSubmit } = useForm();
-
+	const encode = (data) => {
+		return Object.keys(data)
+			.map(
+				(key) => encodeURIComponent(key) + '=' + encodeURIComponent(data[key])
+			)
+			.join('&');
+	};
 	return (
 		<div className="py-3">
 			<form
@@ -11,12 +17,11 @@ function Contact() {
 					fetch('/', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-						body: data,
+						body: encode({ 'form-name': 'contact', ...data }),
 					})
 						.then(() => console.log('Form successfully submitted'))
 						.catch((error) => alert(error));
 				})}
-				data-netlify="true"
 			>
 				<div className="mb-3">
 					<label htmlFor="name" className="form-label">

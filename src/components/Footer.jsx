@@ -34,7 +34,7 @@ function Footer() {
 					</Link>
 				</li>
 			</ul>
-			<p className="text-center text-white">&copy; 2021 Christian Yator, Inc</p>
+			<p className="text-center text-white">&copy; 2021 Christian Yator</p>
 		</footer>
 	);
 }

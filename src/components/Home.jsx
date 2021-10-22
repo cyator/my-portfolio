@@ -18,13 +18,29 @@ function Home() {
 					<h2 className="pb-2 border-bottom border-dark">Projects</h2>
 					<div className="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
 						<div className="col">
-							<Card name="Yote fresh groceries" />
+							<Card
+								name="Yote fresh groceries"
+								desc="Paragraph of text beneath the heading to explain the heading. We'll
+					add onto it with another sentence and probably just keep going until
+					we run out of words."
+								code="https://github.com/cyator/yotefresh-client.git"
+							/>
 						</div>
 						<div className="col">
-							<Card name="JKUAT lab scheduler" />
+							<Card
+								name="JKUAT lab scheduler"
+								desc="Paragraph of text beneath the heading to explain the heading. We'll
+					add onto it with another sentence and probably just keep going until
+					we run out of words."
+							/>
 						</div>
 						<div className="col">
-							<Card name="Random tree generator" />
+							<Card
+								name="Random tree generator"
+								desc="Paragraph of text beneath the heading to explain the heading. We'll
+					add onto it with another sentence and probably just keep going until
+					we run out of words."
+							/>
 						</div>
 					</div>
 				</div>
