@@ -15,7 +15,6 @@ function Contact() {
 		<div className="py-3">
 			<form
 				onSubmit={handleSubmit((data) => {
-					console.log(data);
 					fetch('/', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -24,7 +23,7 @@ function Contact() {
 							...data,
 						}),
 					})
-						.then(() => console.log('success'))
+						.then(() => () => navigate('/thank-you/'))
 						.catch((error) => alert(error));
 				})}
 			>
