@@ -10,7 +10,7 @@ function NavBar() {
 				<button
 					type="button"
 					onClick={() => scroll.scrollToTop()}
-					className="navbar-brand btn btn-link"
+					className="navbar-brand"
 				>
 					<img
 						src={brand}
@@ -39,7 +39,7 @@ function NavBar() {
 					<ul className="navbar-nav  ms-auto mb-2 mb-lg-0 ">
 						<li className="nav-item">
 							<button
-								className="nav-link btn btn-link"
+								className="nav-link"
 								aria-current="page"
 								onClick={() => scroll.scrollToTop()}
 							>
