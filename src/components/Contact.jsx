@@ -11,13 +11,11 @@ function Contact() {
 			)
 			.join('&');
 	}
-
 	return (
 		<div className="py-3">
 			<form
-				data-netlify="true"
-				method="post"
 				onSubmit={handleSubmit((data) => {
+					console.log(data);
 					fetch('/', {
 						method: 'POST',
 						headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
