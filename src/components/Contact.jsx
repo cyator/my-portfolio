@@ -15,8 +15,6 @@ function Contact() {
 	return (
 		<div className="py-3">
 			<form
-				data-netlify="true"
-				method="post"
 				onSubmit={handleSubmit((data) => {
 					fetch('/', {
 						method: 'POST',
