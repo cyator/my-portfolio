@@ -23,7 +23,7 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
-								code="https://github.com/cyator/yotefresh-client.git"
+								code="https://github.com/cyator/yotefresh-groceries.git"
 							/>
 						</div>
 						<div className="col">
@@ -32,6 +32,7 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
+								code="https://github.com/cyator/jkuat-lab-scheduler.git"
 							/>
 						</div>
 						<div className="col">
@@ -40,6 +41,8 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
+								view="https://random-tree-generator.netlify.app"
+								code="https://github.com/cyator/random-tree-generator.git"
 							/>
 						</div>
 					</div>
