@@ -7,7 +7,7 @@ function Footer() {
 			<ul className="nav justify-content-center border-bottom pb-3 mb-3 container">
 				<li className="nav-item">
 					<button
-						className="nav-link px-2 text-white"
+						className="btn btn-link nav-link px-2 text-white"
 						onClick={() => scroll.scrollToTop()}
 					>
 						Home
