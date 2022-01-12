@@ -23,6 +23,7 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
+								view='http://yotefresh.centralus.cloudapp.azure.com/'
 								code="https://github.com/cyator/yotefresh-groceries.git"
 							/>
 						</div>
