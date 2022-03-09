@@ -1,0 +1,10 @@
+version: '3'
+services:
+  client:
+    image: library/my-portfolio-dev:1.0
+    restart: unless-stopped
+    ports:
+      - 3000:3000
+    volumes:
+      - ./:/usr/src/client
+      - /usr/src/client/node_modules

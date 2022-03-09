@@ -23,8 +23,8 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
-								view='http://yotefresh.centralus.cloudapp.azure.com/'
-								code="https://github.com/cyator/yotefresh-groceries.git"
+								view={process.env.REACT_APP_YOTEFRESH_VIEW}
+								code={process.env.REACT_APP_YOTEFRESH_CODE}
 							/>
 						</div>
 						<div className="col">
@@ -33,7 +33,7 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
-								code="https://github.com/cyator/jkuat-lab-scheduler.git"
+								code={process.env.REACT_APP_JKLAB_CODE}
 							/>
 						</div>
 						<div className="col">
@@ -42,8 +42,8 @@ function Home() {
 								desc="Paragraph of text beneath the heading to explain the heading. We'll
 					add onto it with another sentence and probably just keep going until
 					we run out of words."
-								view="https://random-tree-generator.netlify.app"
-								code="https://github.com/cyator/random-tree-generator.git"
+								view={process.env.REACT_APP_TREEGEN_VIEW}
+								code={process.env.REACT_APP_TREEGEN_CODE}
 							/>
 						</div>
 					</div>
@@ -58,7 +58,7 @@ function Home() {
 							<li className="ms-3">
 								<a
 									className="text-muted"
-									href="https://www.linkedin.com/in/christian-yator"
+									href={process.env.LINKEDIN}
 									target="_blank"
 									rel="noreferrer"
 								>
@@ -66,10 +66,7 @@ function Home() {
 								</a>
 							</li>
 							<li className="ms-3">
-								<a
-									className="text-muted"
-									href="mailto:christianyator7@gmail.com"
-								>
+								<a className="text-muted" href={`mailto:${process.env.EMAIL}`}>
 									<img src={email} alt="email" />
 								</a>
 							</li>

@@ -1,0 +1,8 @@
+version: '3'
+services:
+  client:
+    image: library/my-portfolio:1.0
+    restart: unless-stopped
+    ports:
+      - 80:80
+      - 443:443

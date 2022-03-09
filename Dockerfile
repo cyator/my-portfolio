@@ -1,0 +1,42 @@
+# ======= BUILD =========
+FROM node:14-alpine3.12 as builder
+
+WORKDIR /usr/src/client
+
+COPY ./package.json ./
+COPY ./yarn.lock ./
+
+RUN yarn install 
+
+COPY . ./
+
+ARG YOTEFRESH_VIEW
+ARG YOTEFRESH_CODE
+ARG JKLAB_VIEW
+ARG JKLAB_CODE
+ARG TREEGEN_VIEW
+ARG TREEGEN_CODE
+ARG LINKEDIN
+ARG EMAIL
+
+ENV REACT_APP_YOTEFRESH_VIEW=${YOTEFRESH_VIEW}
+ENV REACT_APP_YOTEFRESH_CODE=${YOTEFRESH_CODE}
+ENV REACT_APP_JKLAB_VIEW=${JKLAB_VIEW}
+ENV REACT_APP_JKLAB_CODE=${JKLAB_CODE}
+ENV REACT_APP_TREEGEN_VIEW=${TREEGEN_VIEW}
+ENV REACT_APP_TREEGEN_CODE=${TREEGEN_CODE}
+ENV REACT_APP_LINKEDIN=${LINKEDIN}
+ENV REACT_APP_EMAIL=${EMAIL}
+
+RUN yarn build
+
+# ====== RUN =========
+
+FROM nginx
+
+COPY --from=builder /usr/src/client/build /usr/share/nginx/html
+COPY ./nginx.conf /etc/nginx/conf.d/default.conf
+
+EXPOSE 80
+EXPOSE 443
+
